@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "test": "NODE_ENV=test jest"
+    "test": "jest --env=jsdom --coverage",
+    "coveralls": "yarn test --u && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.12.1",
@@ -48,9 +50,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/registerServiceWorker.js",
       "!src/index.js",
-      "!**/node_modules/**"
+      "!**/node_modules/**",
+      "!src/index.jsx",
+      "!src/routes/**/*.{js,jsx}"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "testMatch": [
