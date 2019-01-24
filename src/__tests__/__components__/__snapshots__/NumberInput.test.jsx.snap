@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberInput component should match component snapshot 1`] = `
+<div
+  className="input__container"
+>
+  <input
+    className="input__field"
+    id="chosenNumber"
+    max="500"
+    min="1"
+    name="chosenNumber"
+    onChange={[MockFunction]}
+    type="number"
+    value={4}
+  />
+  <button
+    className="input__button"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    generate
+  </button>
+</div>
+`;

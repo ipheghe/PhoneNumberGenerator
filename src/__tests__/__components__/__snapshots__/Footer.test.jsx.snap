@@ -5,7 +5,7 @@ exports[`Footer component should match component snapshot 1`] = `
   className="footer__container"
 >
   <p>
-    Copyright © 2017. All rights reserved.
+    Copyright © 2019. All rights reserved.
   </p>
 </div>
 `;
