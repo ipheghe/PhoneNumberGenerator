@@ -1,4 +1,4 @@
-// react library
+// react libraries
 import React from 'react';
 
 // third-party libraries
@@ -8,8 +8,8 @@ import render from 'react-test-renderer';
 // components
 import Header from '../../components/Header';
 
-describe('App component', () => {
-  it('rshould match component snapshot', () => {
+describe('Header component', () => {
+  it('should match component snapshot', () => {
     const tree = render.create(<Header />);
     expect(tree).toMatchSnapshot();
   });

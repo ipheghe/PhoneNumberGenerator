@@ -1,6 +1,9 @@
+// react imports
 import React, { Component } from 'react';
 
+// components
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 /**
  * Container component housing the Single-Page application
@@ -33,6 +36,7 @@ import Header from './components/Header';
     return (
       <div>
         <Header />
+        <Footer />
       </div>
     );
   }
