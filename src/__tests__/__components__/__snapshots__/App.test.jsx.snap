@@ -35,10 +35,31 @@ exports[`App component should match component snapshot 1`] = `
     </ul>
   </div>
   <div
+    className="input__container"
+  >
+    <input
+      className="input__field"
+      id="chosenNumber"
+      max="500"
+      min="1"
+      name="chosenNumber"
+      onChange={[Function]}
+      type="number"
+      value={0}
+    />
+    <button
+      className="input__button"
+      onClick={[Function]}
+      type="button"
+    >
+      Generate
+    </button>
+  </div>
+  <div
     className="footer__container"
   >
     <p>
-      Copyright © 2017. All rights reserved.
+      Copyright © 2019. All rights reserved.
     </p>
   </div>
 </div>

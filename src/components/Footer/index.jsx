@@ -11,7 +11,7 @@ import './Footer.scss';
  */
 const Footer = () =>  (
   <div className="footer__container">
-    <p>Copyright © 2017. All rights reserved.</p>
+    <p>Copyright © 2019. All rights reserved.</p>
   </div>
 );
 

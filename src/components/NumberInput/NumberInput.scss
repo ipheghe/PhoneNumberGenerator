@@ -1,0 +1,32 @@
+.input__container {
+  display: flex;
+  padding: 0;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  justify-self: center;
+
+  .input__field {
+    height: 54px;
+    width: 100px;
+    margin-right:0;
+    border: 2px #000 solid;
+    padding: 5px 12px;
+    font-size: 20px;
+  }
+
+  .input__button {
+    height: 100%;
+    width: 250px;
+    background-color: #57CCCb;
+    color: #FFF;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:focus {
+      outline:0;
+    }
+  }
+}

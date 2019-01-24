@@ -5,6 +5,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   margin: auto;
   padding: 0;
