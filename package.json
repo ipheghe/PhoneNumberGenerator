@@ -23,9 +23,6 @@
   },
   "homepage": "https://github.com/ipheghe/phone-number-generator#readme",
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
     "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
@@ -43,7 +40,11 @@
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@reach/router": "^1.2.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "express": "^4.16.4",
     "jest": "^23.6.0",
     "morgan": "^1.9.1",
@@ -65,6 +66,11 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transformIgnorePatterns": [
@@ -79,5 +85,9 @@
       "node",
       "mjs"
     ]
+  },
+  "moduleNameMapper": {
+    "\\.(css|scss|less)$": "<rootDir>/Client/jest/styleMock.js",
+    "\\.(png|jpg|jpeg|gif|ttf|eot|svg)$": "<rootDir>/Client/jest/fileMock.js"
   }
 }

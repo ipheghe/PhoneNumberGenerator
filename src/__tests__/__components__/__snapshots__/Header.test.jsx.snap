@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component rshould match component snapshot 1`] = `
+<div
+  className="header__container"
+>
+  <h3>
+    Number Generator
+  </h3>
+  <ul
+    className="menu__container"
+  >
+    <li
+      className="menu__container__items"
+    >
+      <a
+        aria-current="page"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="menu__container__items"
+    >
+      <a
+        href="/operations"
+        onClick={[Function]}
+      >
+        Operations
+      </a>
+    </li>
+  </ul>
+</div>
+`;
