@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+import Header from './components/Header';
+
+/**
+ * Container component housing the Single-Page application
+ *
+ * @class Dashboard
+ * @extends {React.Component<DashboardProps, DashboardState>}
+ */export default class App extends Component {
+  /**
+   * Creates an instance of App
+   *
+   * @param {object} props - props
+   * @memberof App
+   * @returns {void}
+   */
   constructor(props) {
     super(props);
 
@@ -9,10 +23,16 @@ export default class App extends Component {
     };
   }
 
+  /**
+   * Renders App component
+   *
+   * @returns {JSX} jsx
+   * @memberof App
+   */
   render() {
     return (
       <div>
-        <h1>{this.state.welcomeText}</h1>
+        <Header />
       </div>
     );
   }
