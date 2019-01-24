@@ -1,6 +1,10 @@
+// react lib imports
 import React from 'react';
+
+// third-party lib imports
 import { Link } from '@reach/router';
 
+// styles
 import './Header.scss';
 
 /**
