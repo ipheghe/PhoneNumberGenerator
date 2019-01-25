@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast Provider component should match component snapshot 1`] = `null`;
+
+exports[`Toast component should match component snapshot 1`] = `
+<div
+  className="toast__container "
+>
+  <p>
+    yes
+  </p>
+</div>
+`;

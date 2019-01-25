@@ -21,16 +21,6 @@ exports[`Header component should match component snapshot 1`] = `
         Home
       </a>
     </li>
-    <li
-      className="menu__container__items"
-    >
-      <a
-        href="/operations"
-        onClick={[Function]}
-      >
-        Operations
-      </a>
-    </li>
   </ul>
 </div>
 `;

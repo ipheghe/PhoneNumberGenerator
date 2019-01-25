@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component should match component snapshot 1`] = `
+<div
+  className="table-wrapper"
+>
+  <div
+    className="table-row table-header"
+  >
+    <span
+      className="table-col-20"
+    >
+      #
+    </span>
+    <span
+      className="table-col-30"
+    >
+      id
+    </span>
+    <span
+      className="table-col"
+    >
+      Generated Numbers
+    </span>
+  </div>
+  <div>
+    <div
+      className="table-row"
+    >
+      <span
+        className="table-col-20"
+      >
+        1
+      </span>
+      <span
+        className="table-col-30"
+      >
+        1
+      </span>
+      <span
+        className="table-col"
+      >
+        1234555
+      </span>
+    </div>
+  </div>
+</div>
+`;
