@@ -19,9 +19,6 @@ const Header = () =>  (
       <li className="menu__container__items">
         <Link to="/">Home</Link>
       </li>
-      <li className="menu__container__items">
-        <Link to="/operations">Operations</Link>
-      </li>
     </ul>
   </div>
 );

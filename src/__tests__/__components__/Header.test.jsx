@@ -17,7 +17,7 @@ describe('Header component', () => {
   it('renders without crashing', () => {
     const shallowWrapper = shallow(<Header />);
     expect(shallowWrapper).toBeDefined();
-    expect(shallowWrapper.find('.menu__container__items').length).toBe(2);
+    expect(shallowWrapper.find('.menu__container__items').length).toBe(1);
     expect(shallowWrapper.exists()).toBe(true);
   });
 });

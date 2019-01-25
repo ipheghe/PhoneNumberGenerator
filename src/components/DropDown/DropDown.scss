@@ -1,0 +1,77 @@
+@import '../../common/functions.scss';
+
+.dropdown__container {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    .dropdown__btn {
+      background-color: #0d7d7c;
+    }
+
+    .dropdown__content {
+      display: block;
+    }
+  }
+
+  .dropdown__btn {
+    display: flex;
+    background-color: #57CCCb;
+    padding: rem(16px);
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+    
+    p {
+      color: white;
+      font-size: rem(16px);
+      padding:0;
+      margin: 0;
+
+      i {
+        border: solid #FFF;
+        border-width: 0 rem(3px) rem(3px) 0;
+        display: inline-block;
+        padding: rem(3px);
+        margin-bottom: rem(2px);
+        margin-right: rem(2px);
+      }
+
+      .down__arrow {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+
+  .dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: rem(160px);
+    box-shadow: 0 rem(8px) rem(16px) 0 rgba(0,0,0,0.2);
+    z-index: 1;
+
+    .dropdown__btn__item {
+      color: black;
+      padding: rem(12px) rem(16px);
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      cursor: pointer;   
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: rem(450px)) {
+  .dropdown__content {
+    right: 0;
+  }
+}

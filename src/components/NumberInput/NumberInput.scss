@@ -1,32 +1,51 @@
+@import '../../common/functions.scss';
+
 .input__container {
   display: flex;
   padding: 0;
-  height: 60px;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
-  justify-self: center;
 
   .input__field {
-    height: 54px;
-    width: 100px;
+    height: rem(54px);
+    width: rem(100px);
     margin-right:0;
-    border: 2px #000 solid;
-    padding: 5px 12px;
-    font-size: 20px;
+    border: rem(2px) #000 solid;
+    padding: rem(5px) rem(12px);
+    font-size: rem(20px);
   }
 
   .input__button {
-    height: 100%;
-    width: 250px;
-    background-color: #57CCCb;
+    height: rem(60px);
+    width: rem(250px);
+    background-color: #57CCCB;
     color: #FFF;
-    font-size: 20px;
+    font-size: rem(20px);
     text-transform: capitalize;
     cursor: pointer;
 
     &:focus {
       outline:0;
+    }
+  }
+}
+
+@media screen and (max-width: rem(450px)) {
+ .input__container {
+    flex-direction: column;
+    max-height: rem(120px);
+    align-items: center;
+    justify-content: center;
+
+    .input__field {
+      height: rem(54px);
+      width: rem(100px);
+      margin-bottom: rem(3px);
+    }
+  
+    .input__button {
+      height: rem(60px);
+      width: rem(250px);
     }
   }
 }

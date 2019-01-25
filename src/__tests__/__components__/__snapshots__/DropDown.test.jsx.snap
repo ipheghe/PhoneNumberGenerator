@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown component should match component snapshot 1`] = `
+<div
+  className="dropdown__container "
+>
+  <button
+    className="dropdown__btn"
+    type="button"
+  >
+    <p>
+      Sort By 
+      <span>
+        <i
+          className="down__arrow"
+        />
+      </span>
+    </p>
+  </button>
+  <div
+    className="dropdown__content"
+  >
+    <button
+      className="dropdown__btn__item"
+      onClick={[Function]}
+      type="button"
+    >
+      Id
+    </button>
+    <button
+      className="dropdown__btn__item"
+      onClick={[Function]}
+      type="button"
+    >
+      Highest Number
+    </button>
+    <button
+      className="dropdown__btn__item"
+      onClick={[Function]}
+      type="button"
+    >
+      Lowest Number
+    </button>
+  </div>
+</div>
+`;

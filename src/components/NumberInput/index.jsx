@@ -40,7 +40,10 @@ const NumberInput = ({
 );
 
 NumberInput.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]).isRequired,
   onChange: PropTypes.func.isRequired,
   buttonText: PropTypes.string.isRequired,
   handleButtonClick: PropTypes.func.isRequired,

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should match component snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="number__input__section"
+  >
+    <div
+      className="number__details"
+    >
+      <p>
+        Total Numbers: 
+        <span>
+          0
+        </span>
+      </p>
+      <p>
+        Max Number: 
+        <span>
+          0
+        </span>
+      </p>
+      <p>
+        Minimum Numbers: 
+        <span>
+          0
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="input__container"
+  >
+    <input
+      className="input__field"
+      id="chosenNumber"
+      max="500"
+      min="1"
+      name="chosenNumber"
+      onChange={[Function]}
+      type="number"
+      value={0}
+    />
+    <button
+      className="input__button"
+      onClick={[Function]}
+      type="button"
+    >
+      Generate
+    </button>
+  </div>
+  <div
+    className="empty_table__text"
+  >
+    <h1>
+      No Generated Number Yet.
+    </h1>
+    <h1>
+      Please enter a number to be generated
+    </h1>
+  </div>
+</div>
+`;
