@@ -161,16 +161,27 @@ describe('App component', () => {
     expect(mountWrapper.find('DropDown').length).toEqual(1);
   });
 
-  it('should call generatePhoneNumbers method', () => {
+  it('should call generatePhoneNumbers method when data from state is not empty', () => {
     const mountWrapper = mount(<Dashboard {...props} />);
     const generatePhoneNumbersSpy = spy(mountWrapper.instance(), 'generatePhoneNumbers');
-    mountWrapper.setState({ data, choseNumber: 2 });
+    mountWrapper.setState({ data, chosenNumber: 2 });
     expect(mountWrapper.state().data.length).toEqual(3);
 
     mountWrapper.instance().generatePhoneNumbers();
     expect(generatePhoneNumbersSpy.called).toEqual(true);
     expect(mountWrapper.props().showMessage.called).toEqual(true);
     expect(mountWrapper.state().data.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('should call generatePhoneNumbers method when data from state is empty', () => {
+    const mountWrapper = mount(<Dashboard {...props} />);
+    const generatePhoneNumbersSpy = spy(mountWrapper.instance(), 'generatePhoneNumbers');
+    mountWrapper.setState({ data: [], chosenNumber: 2 });
+    expect(mountWrapper.state().data.length).toEqual(0);
+
+    mountWrapper.instance().generatePhoneNumbers();
+    expect(generatePhoneNumbersSpy.called).toEqual(true);
+    expect(mountWrapper.props().showMessage.called).toEqual(true);
   });
 
 });

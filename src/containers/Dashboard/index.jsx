@@ -58,6 +58,7 @@ export class Dashboard extends Component {
     const formattedNumber = parseInt(chosenNumber, 10);
     let generatedNumber;
     let generatedData = [];
+    let updatedGeneratedData;
 
     for (let i = 1; i < formattedNumber + 1; i += 1) {
       generatedNumber = String(
@@ -75,10 +76,18 @@ export class Dashboard extends Component {
       }
     }
     const lastId = data.sort((a, b) => b.id - a.id);
-    const updatedGeneratedData = generatedData.map((item, index) => {
-      item['id'] = lastId[0] ? lastId[0].id + index + 1 : 1;
-      return item;
-    });
+    if (!lastId.length) {
+      updatedGeneratedData = generatedData.map((item, index) => {
+        item['id'] = index + 1;
+        return item;
+      });
+    } else {
+      updatedGeneratedData = generatedData.map((item, index) => {
+        item['id'] = lastId[0].id + index + 1;
+        return item;
+      });
+    }
+
     showMessage('Number(s) generated successfully', 'success');
     return updatedGeneratedData;
   };
